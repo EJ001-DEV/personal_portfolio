@@ -1,0 +1,50 @@
+{% extends 'layout.html' %}
+
+{% block content %}
+
+{% load static %}
+
+<div class="container text-justify bg-black">
+    <div class="row justify-content-start">
+        <div class="card col-4 bg-black">
+            <img src="{% static 'portfolio/EJ_coder_2.png' %}" alt=""/>
+        </div>
+    
+    
+        <div class="col-8">
+            <h1>I'm <strong>Edwuard Jorge</strong></h1>
+            <h3>Python FullStack Developer - Django | React | JS | Oracle Forms and Reports | C | Database: Oracle DB, PostgreSql, PL-SQL</h3>
+            <p>I am a senior specialist in systems development with more than 18 years of experience between languages: Python, Django, React, JavaScript, Oracle Forms and Reports, C, React. I am characterized by the curiosity to learn new technologies and obtain new opportunities to grow professionally and personally, always focused on giving the best of myself.</p>
+            <a href="{% static 'portfolio/Resume Python Developer.pdf' %}" class="btn btn-primary   my-3"
+                target="_blank" >Download Resume</a>
+        </div>
+    </div>
+</div>
+
+
+<div class="row my-4 text-center">
+    <h3>My Project</h3>
+    <p>Check out part of my work bellow</p>
+
+    {% for project in projects %}
+
+    <div class="card bg-black col-md-4 p-4 mx-auto" style="width: 18rem;">
+        <img src="{{project.image.url}}" alt="{{project.title}}" class="card-img-top bg-black" />
+        <div class="card-text text-light">
+          
+            <h2>{{ project.title }}</h2>
+            <p>{{project.description}}</p>
+
+            {% if project.url %}
+            <a href="{{project.url}}" class="btn bg-black rounded-0 btn-sm text-light" target="_blank">{{project.url}}</a>
+            {% endif %}
+
+        </div>
+      </div>
+
+
+
+    {% endfor %}
+
+</div>
+{% endblock %}
