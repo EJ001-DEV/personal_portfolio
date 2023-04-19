@@ -87,10 +87,11 @@ WSGI_APPLICATION = 'django_portfolio.wsgi.application'
 
 DATABASES = {
 'default': dj_database_url.config(     
-        default='postgresql://postgres:7GXWyAzTuS3zzdCQyfgC@containers-us-west-59.railway.app:6363/railway',        
+        default='postgres://EJ001-DEV:5CZ0EGeBOkKx@ep-soft-sky-263817.us-east-2.aws.neon.tech/neondb',        
         conn_max_age=600    
         )
 }    
+
 
 '''
 DATABASES = {
