@@ -29,10 +29,10 @@
     {% for project in projects %}
 
     <div class="card bg-black col-md-4 p-4 mx-auto" style="width: 18rem;">
-        <img src="{% static 'portfolio/EJ_code.png' %}" alt="{{project.title}}" class="card-img-top bg-black" />
+        <img src="{% static 'portfolio/EJ_code.png' %}" alt="{{project.title}}" class="card-img-top bg-black"/>
         
         <div class="card-text text-light">
-            <h2>{{ project.title }}</h2>
+            <h2>{{project.title}}</h2>
             <p>{{project.description}}</p>
 
             {% if project.url %}
