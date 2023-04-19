@@ -4,7 +4,7 @@ set -o errexit
 
 #poetry install
 #pip install -m requirements.txt
-railway connect Postgres
+#railway connect Postgres
 
 python manage.py collectstatic --no-input
 python manage.py migrate

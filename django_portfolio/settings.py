@@ -13,6 +13,9 @@ https://docs.djangoproject.com/en/4.2/ref/settings/
 from pathlib import Path
 import os
 import dj_database_url
+#from dotenv import load_dotenv
+
+#load_dotenv('.env')
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -84,9 +87,25 @@ WSGI_APPLICATION = 'django_portfolio.wsgi.application'
 
 DATABASES = {
 'default': dj_database_url.config(     
-        default='postgresql://postgres:postgres@localhost:5432/mysite',        conn_max_age=600    
+        default='postgresql://postgres:7GXWyAzTuS3zzdCQyfgC@containers-us-west-59.railway.app:6363/railway',        
+        conn_max_age=600    
         )
 }    
+
+'''
+DATABASES = {
+    'default': {
+    'ENGINE': 'django.db.backends.postgresql',
+    'URL': os.getenv('POSTGRES_URL'),
+    'NAME': os.getenv('PGNAME'),
+    'USER': os.getenv('PGUSER'),
+    'PASSWORD': os.getenv('POSTGRES_PASSWORD'),
+    'HOST': os.getenv('PGHOST'),
+    'PORT': os.getenv('PGPORT'),
+    }
+}
+'''
+
 
 
 # Password validation
