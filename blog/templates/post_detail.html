@@ -1,0 +1,29 @@
+{% extends 'layout.html' %}
+
+{% load static %}
+
+{% block content %}
+
+<div class="text-center">
+    <h1>{{post.title}}</h1>
+    <h3 class="my-2 h5 text-light">{{post.date|date:'F jS Y'}}</h3>
+    
+    <div class="row justify-content-center">
+
+        <div class="card col-4 bg-black">
+            <img src="{{post.image.url}}" alt="{{post.title}}" class="img-fluid">
+        </div>
+    
+        <div class="my-4">
+            <p class="text-justify">{{post.description|safe}}</p>
+        </div>
+        
+        <a href="{{post.pdf_1.url}}" class="btn btn-primary my-3 rounded-0 btn-sm text-light" target="_blank">{{post.pdf_1}}</a>  
+    
+        <a href="{{post.pdf_2.url}}" class="btn btn-primary my-3 rounded-0 btn-sm text-light" target="_blank">{{post.pdf_2}}</a>  
+       
+    </div>
+</div>
+
+
+{% endblock %}
