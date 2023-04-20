@@ -49,7 +49,8 @@ if RENDER_EXTERNAL_HOSTNAME:
     ALLOWED_HOSTS.append(RENDER_EXTERNAL_HOSTNAME)
 '''
 
-ALLOWED_HOSTS = ['.vercel.app', '.now.sh']
+#ALLOWED_HOSTS = ['.vercel.app', '.now.sh']
+ALLOWED_HOSTS = ['127.0.0.1', '.vercel.app']
 
 #CSRF_TRUSTED_ORIGINS = ['https://*.fly.dev']  # <-- Updated!
 
@@ -101,8 +102,8 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'django_portfolio.wsgi.application'
-
+#WSGI_APPLICATION = 'django_portfolio.wsgi.application'
+WSGI_APPLICATION = 'vercel_app.wsgi.app'
 
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
