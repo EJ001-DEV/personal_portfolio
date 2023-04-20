@@ -50,7 +50,8 @@ if RENDER_EXTERNAL_HOSTNAME:
 '''
 
 #ALLOWED_HOSTS = ['.vercel.app', '.now.sh']
-ALLOWED_HOSTS = ['127.0.0.1', '.vercel.app']
+#ALLOWED_HOSTS = ['127.0.0.1', '.vercel.app']
+ALLOWED_HOSTS = ['.vercel.app'] # Allow *.vercel.app
 
 #CSRF_TRUSTED_ORIGINS = ['https://*.fly.dev']  # <-- Updated!
 
