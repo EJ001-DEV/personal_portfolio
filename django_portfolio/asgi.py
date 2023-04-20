@@ -15,4 +15,4 @@ os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'django_portfolio.settings')
 
 application = get_asgi_application()
 
-app = application
+#app = application

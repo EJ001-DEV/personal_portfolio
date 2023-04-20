@@ -103,7 +103,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'django_portfolio.wsgi.app'
+WSGI_APPLICATION = 'django_portfolio.wsgi.application'
 #WSGI_APPLICATION = 'vercel_app.wsgi.app'
 
 # Database
