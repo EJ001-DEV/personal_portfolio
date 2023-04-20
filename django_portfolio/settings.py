@@ -109,11 +109,6 @@ WSGI_APPLICATION = 'vercel_app.wsgi.app'
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
 DATABASES = {
-    # read os.environ['DATABASE_URL']
-    'default': env.db()  # <-- Updated!
-}
-
-DATABASES = {
 'default': dj_database_url.config(     
         default='postgres://EJ001-DEV:5CZ0EGeBOkKx@ep-soft-sky-263817.us-east-2.aws.neon.tech/neondb',        
         conn_max_age=600    
