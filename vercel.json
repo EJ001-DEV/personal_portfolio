@@ -15,14 +15,7 @@
       "config": {
         "distDir": "staticfiles_build"
       }
-    },
-    {
-      "src": "build.sh",
-      "use": "@vercel/media-build",
-      "config": {
-        "distDir": "mediafiles_build"
-      }
-    }    
+    }   
 ],
 "routes": [
   {
