@@ -2,8 +2,13 @@
 
 #Build the project
 echo "Building the project"
+pip install virtualenv
+virtualenv venv
+source venv/bin/activate
 python3.9 -m pip install --upgrade pip
+
 python3.9 -m pip install -r requirements.txt
+
 
 #ENV PIP_ROOT_USER_ACTION=ignore
 
