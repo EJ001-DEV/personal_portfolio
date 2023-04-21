@@ -24,7 +24,7 @@
   },         
   {
     "src": "/media/(.*)",
-    "dest": "/mediafiles_build/$1"
+    "dest": "/media/$1"
   },    
   {
       "src": "/(.*)",
