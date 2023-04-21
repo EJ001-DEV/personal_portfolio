@@ -16,15 +16,5 @@
         "distDir": "staticfiles_build"
       }
     }
-],
-  "routes": [
-      {
-        "src": "/static/(.*)",
-        "dest": "/static/$1"
-      },          
-      {
-          "src": "/(.*)",
-          "dest": "django_portfolio/wsgi.py"
-      }
-  ]
+]
 }
