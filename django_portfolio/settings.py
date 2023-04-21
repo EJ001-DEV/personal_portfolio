@@ -14,7 +14,7 @@ from pathlib import Path
 import os
 import dj_database_url
 import environ  # <-- Updated!
-from decouple import config
+#from decouple import config
 #from dotenv import load_dotenv
 
 #load_dotenv('.env')
