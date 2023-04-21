@@ -90,7 +90,7 @@ ROOT_URLCONF = 'django_portfolio.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR / 'templates'],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -104,18 +104,20 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'django_portfolio.wsgi.app'
+WSGI_APPLICATION = 'django_portfolio.wsgi.application'
+#WSGI_APPLICATION = 'django_portfolio.wsgi.app'
 #WSGI_APPLICATION = 'vercel_app.wsgi.app'
 
 # Database
 # https://docs.djangoproject.com/en/4.2/ref/settings/#databases
 
+#DATABASES['default'] = dj_database_url.config()
 DATABASES = {
 'default': dj_database_url.config(     
         default='postgres://EJ001-DEV:5CZ0EGeBOkKx@ep-soft-sky-263817.us-east-2.aws.neon.tech/neondb',        
         conn_max_age=600    
         )
-}    
+} 
 
 
 '''
