@@ -52,7 +52,7 @@ if RENDER_EXTERNAL_HOSTNAME:
 
 #ALLOWED_HOSTS = ['.vercel.app', '.now.sh']
 #ALLOWED_HOSTS = ['127.0.0.1', '.vercel.app']
-ALLOWED_HOSTS = ['.vercel.app'] # Allow *.vercel.app
+ALLOWED_HOSTS = ['.vercel.app','127.0.0.1'] # Allow *.vercel.app
 
 #CSRF_TRUSTED_ORIGINS = ['https://*.fly.dev']  # <-- Updated!
 
@@ -170,8 +170,8 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
-STATICFILES_DIRS = os.path.join(BASE_DIR, 'static'),
-#STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles', 'static')
+#STATICFILES_DIRS = os.path.join(BASE_DIR, 'static'),
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles_buid', 'static')
 
 STATIC_URL = 'static/'
 
@@ -191,9 +191,9 @@ STATIC_ROOT = BASE_DIR / 'staticfiles_build' / "static"
 
 #MEDIA_ROOT = BASE_DIR / 'media'
 
-MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
-
-MEDIA_URL = 'media/'
+#MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+MEDIA_ROOT = BASE_DIR / 'staticfiles_build' / 'media'
+MEDIA_URL = '/media/'
 
 
 
