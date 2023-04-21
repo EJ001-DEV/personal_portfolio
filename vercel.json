@@ -1,4 +1,5 @@
 {
+  "version": 2,
   "builds": [
     {
       "src": "django_portfolio/wsgi.py",
@@ -12,7 +13,7 @@
       "src": "build.sh",
       "use": "@vercel/static-build",
       "config": {
-        "distDir": "static_build"
+        "distDir": "staticfiles_build"
       }
     }
 ],
