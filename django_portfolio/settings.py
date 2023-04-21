@@ -172,22 +172,29 @@ USE_TZ = True
 
 #STATICFILES_DIRS = os.path.join(BASE_DIR, 'static'),
 
-STATIC_URL = 'static/'
-MEDIA_URL = 'media/'
+STATIC_URL = '/static/'
+STATIC_ROOT = BASE_DIR / 'staticfiles'
+STATICFILES_DIRS = [BASE_DIR / 'static',]
+STATICFILES_STORAGE = 'django.contrib.staticfiles.storage.StaticFilesStorage'
 
-MEDIA_ROOT = BASE_DIR / 'media/'
+#STATIC_URL = 'static/'
+MEDIA_URL = 'media/'
+MEDIA_ROOT = BASE_DIR / 'media'
+
+#MEDIA_URL = '/media/'
+#MEDIA_ROOT = BASE_DIR / 'uploads'
 
 #STATIC_ROOT = os.path.join(BASE_DIR, 'static')
-STATIC_ROOT = BASE_DIR / 'static/'
+#STATIC_ROOT = BASE_DIR / 'static/'
 
-#print('STATIC_ROOT: ' + STATIC_ROOT)
+#print('STATIC_ROOT: ' + str(STATIC_ROOT))
 
 #STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 
 
 #STATIC_ROOT = BASE_DIR / "static"
-STATIC_ROOT = BASE_DIR / 'staticfiles_build' / "static"
+#STATIC_ROOT = BASE_DIR / 'staticfiles_build' / "static"
 
 
 
