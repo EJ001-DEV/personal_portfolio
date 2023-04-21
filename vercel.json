@@ -3,7 +3,15 @@
   "version": 2,
   "builds": [
     {
-      "src": "static/**",
+      "src": "django_portfolio/wsgi.py",
+      "use": "@vercel/python",
+      "config": { 
+        "maxLambdaSize": "15mb" , 
+        "runtime": "python3.9" 
+      }
+    },    
+    {
+      "src": "build.sh",
       "use": "@vercel/static",
       "config": {
         "distDir": "staticfiles_build"
@@ -15,14 +23,6 @@
       "config": {
         "maxAge": 0,
         "distDir": "staticfiles_build"
-      }
-    },
-    {
-      "src": "django_portfolio/wsgi.py",
-      "use": "@vercel/python",
-      "config": { 
-        "maxLambdaSize": "15mb" , 
-        "runtime": "python3.9" 
       }
     }
   ],
