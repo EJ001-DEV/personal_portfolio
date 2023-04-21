@@ -3,7 +3,7 @@
 #Build the project
 echo "Building the project"
 python3.9 -m pip install --upgrade pip
-python3.9 -m pip install --root-user-action=ignore -r requirements.txt
+python3.9 -m pip install -r requirements.txt
 
 #ENV PIP_ROOT_USER_ACTION=ignore
 
