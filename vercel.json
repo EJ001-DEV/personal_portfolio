@@ -6,7 +6,7 @@
       "src": "django_portfolio/wsgi.py",
       "use": "@vercel/python",
       "config": { 
-        "maxLambdaSize": "15mb" , 
+        "maxLambdaSize": "60mb" , 
         "runtime": "python3.9" 
       }
     },    
