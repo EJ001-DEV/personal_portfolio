@@ -4,13 +4,17 @@
   "builds": [
     {
       "src": "static/**",
-      "use": "@vercel/static"
+      "use": "@vercel/static",
+      "config": {
+        "distDir": "staticfiles_build"
+      }      
     },
     {
       "src": "media/**",
       "use": "@vercel/static",
       "config": {
-        "maxAge": 0
+        "maxAge": 0,
+        "distDir": "staticfiles_build"
       }
     },
     {
