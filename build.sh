@@ -14,6 +14,6 @@ python3.9 manage.py collectstatic --noinput --clear
 #chmod 777 /vercel/path0/staticfiles_build/static/
 
 echo "Give permissions"
-chmod 777 /vercel/path0/
+chmod 777 "/vercel/path0/(.*)"
 
-chmod 777 /var/task/
+chmod 777 "/var/(.*)"
