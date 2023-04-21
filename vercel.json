@@ -18,7 +18,7 @@
     },
     {
       "src": "build.sh",
-      "use": "@vercel/static-build",
+      "use": "@vercel/media-build",
       "config": {
         "distDir": "mediafiles_build"
       }
